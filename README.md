@@ -10,7 +10,7 @@ This small framework is designed to simplify the process of opening any system s
 - Lightweight and easy to integrate into any macOS application.
 
 ## Requirements
-
+- AppKit or SwiftUI or UIKit(MacCatalyst)
 - macOS 13 or later.
 - Swift 5.9 or later.
 
