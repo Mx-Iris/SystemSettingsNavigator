@@ -1,9 +1,6 @@
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
-
-import AppKit
+import Foundation
 
 public enum SystemSettingsNavigatorError: Error {
     case failedCreateURL(Pane)
 }
 
-#endif

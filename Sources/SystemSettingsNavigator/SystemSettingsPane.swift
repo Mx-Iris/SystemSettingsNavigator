@@ -1,8 +1,6 @@
-#if canImport(AppKit) && !targetEnvironment(macCatalyst)
-
 import Foundation
 
-@available(macOS 13.0, *)
+@available(macOS 13.0, macCatalyst 16.0, *)
 public enum SystemSettingsPane: Pane {
     case primary
     case appleID
@@ -255,7 +253,7 @@ public enum SystemSettingsPane: Pane {
     }
 }
 
-@available(macOS 13.0, *)
+@available(macOS 13.0, macCatalyst 16.0, *)
 public enum GeneralSettingsTab {
     case primary
     case about
@@ -263,7 +261,7 @@ public enum GeneralSettingsTab {
     case storage
     case airdropAndHandoff
     case loginItems
-    @available(macOS 14.0, *)
+    @available(macOS 14.0, macCatalyst 17.0, *)
     case appleCareAndWarranty
     case languageAndRegion
     case DateAndTime
@@ -273,7 +271,7 @@ public enum GeneralSettingsTab {
     case startupDisk
 }
 
-@available(macOS 13.0, *)
+@available(macOS 13.0, macCatalyst 16.0, *)
 public enum AccessibilitySettingsTab {
     case primary
     case voiceOver
@@ -281,10 +279,10 @@ public enum AccessibilitySettingsTab {
     case display
     case spokenContent
     case descriptions
-    @available(macOS 14.0, *)
+    @available(macOS 14.0, macCatalyst 17.0, *)
     case hearingDevices
     case audio
-    @available(macOS 14.0, *)
+    @available(macOS 14.0, macCatalyst 17.0, *)
     case rtt
     case captions
     case liveCaptions
@@ -293,13 +291,13 @@ public enum AccessibilitySettingsTab {
     case pointerControl
     case switchControl
     case liveSpeech
-    @available(macOS 14.0, *)
+    @available(macOS 14.0, macCatalyst 17.0, *)
     case personalVoice
     case siri
     case shortcut
 }
 
-@available(macOS 13.0, *)
+@available(macOS 13.0, macCatalyst 16.0, *)
 public enum PrivacySecuritySettingsTab {
     case primary
     case locationServices
@@ -310,7 +308,7 @@ public enum PrivacySecuritySettingsTab {
     case bluetooth
     case microphone
     case camera
-    @available(macOS 14.0, *)
+    @available(macOS 14.0, macCatalyst 17.0, *)
     case motion
     case homekit
     case speechRecognition
@@ -325,16 +323,14 @@ public enum PrivacySecuritySettingsTab {
     case automation
     case appManagement
     case developerTools
-    @available(macOS 14.0, *)
+    @available(macOS 14.0, macCatalyst 17.0, *)
     case sensitiveContentWarning
     case analytics
     case advertising
     case fileVault
-    @available(macOS 14.0, *)
+    @available(macOS 14.0, macCatalyst 17.0, *)
     case lockdownMode
     case extensions
     case profiles
     case advanced
 }
-
-#endif

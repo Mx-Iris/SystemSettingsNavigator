@@ -6,7 +6,7 @@ import PackageDescription
 let package = Package(
     name: "SystemSettingsNavigator",
     platforms: [
-        .macOS(.v13),
+        .macOS(.v13), .macCatalyst(.v16),
     ],
     products: [
         .library(
