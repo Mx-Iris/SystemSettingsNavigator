@@ -27,7 +27,10 @@ https://github.com/Mx-Iris/SystemSettingsNavigator.git
 import SystemSettingsNavigator
 
 // Example: Open the Accessibility pane audio tab
-try SystemSettingsNavigator.shared.navigate(to: .accessibility(.audio))
+// AppKit
+NSWorkspace.shared.openSystemSettings(.accessibility(.audio))
+// UIKit
+UIApplication.shared.openSystemSettings(.accessibility(.audio))
 ```
 
 ## Contributing
