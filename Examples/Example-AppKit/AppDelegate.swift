@@ -28,7 +28,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     @IBAction func navigate(_ sender: NSButton) {
-        _ = try? SystemSettingsNavigator.shared.navigate(to: .privacySecurity(.fullDiskAccess))
+        if #available(macOS 15.0, *) {
+//            try? SystemSettingsNavigator.shared.navigate(to: .privacySecurity(.extensions))
+            NSWorkspace.shared.openSystemSettings(.privacySecurity(.extensions))
+        } else {
+            // Fallback on earlier versions
+        }
     }
 }
 

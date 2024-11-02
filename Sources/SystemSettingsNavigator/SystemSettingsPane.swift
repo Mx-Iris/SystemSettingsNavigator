@@ -104,11 +104,12 @@ public enum SystemSettingsPane: Pane {
                 "x-apple.systempreferences:com.apple.preference.universalaccess?Seeing_VoiceOver"
             case .zoom:
                 "x-apple.systempreferences:com.apple.preference.universalaccess?Zoom"
+            case .hoverText:
+                "x-apple.systempreferences:com.apple.preference.universalaccess?HoverText"
             case .display:
                 "x-apple.systempreferences:com.apple.preference.universalaccess?Seeing_Display"
             case .spokenContent:
                 "x-apple.systempreferences:com.apple.preference.universalaccess?SpokenContent"
-
             case .descriptions:
                 "x-apple.systempreferences:com.apple.preference.universalaccess?Descriptions"
             case .hearingDevices:
@@ -133,6 +134,8 @@ public enum SystemSettingsPane: Pane {
                 "x-apple.systempreferences:com.apple.preference.universalaccess?LiveSpeech"
             case .personalVoice:
                 "x-apple.systempreferences:com.apple.preference.universalaccess?PersonalVoice"
+            case .vocalShortcuts:
+                "x-apple.systempreferences:com.apple.preference.universalaccess?VocalShortcuts"
             case .siri:
                 "x-apple.systempreferences:com.apple.preference.universalaccess?Siri"
             case .shortcut:
@@ -182,6 +185,8 @@ public enum SystemSettingsPane: Pane {
                 "x-apple.systempreferences:com.apple.preference.security?Privacy_Accessibility"
             case .inputMonitoring:
                 "x-apple.systempreferences:com.apple.preference.security?Privacy_ListenEvent"
+//            case .localNetwork:
+//                "x-apple.systempreferences:com.apple.settings.PrivacySecurity.extension?Privacy_LocalNetwork"
             case .screenRecording:
                 "x-apple.systempreferences:com.apple.preference.security?Privacy_ScreenCapture"
             case .passkeysAccess:
@@ -276,6 +281,8 @@ public enum AccessibilitySettingsTab {
     case primary
     case voiceOver
     case zoom
+    @available(macOS 15.0, macCatalyst 18.0, *)
+    case hoverText
     case display
     case spokenContent
     case descriptions
@@ -293,6 +300,8 @@ public enum AccessibilitySettingsTab {
     case liveSpeech
     @available(macOS 14.0, macCatalyst 17.0, *)
     case personalVoice
+    @available(macOS 15.0, macCatalyst 18.0, *)
+    case vocalShortcuts
     case siri
     case shortcut
 }
@@ -318,6 +327,8 @@ public enum PrivacySecuritySettingsTab {
     case focus
     case accessibility
     case inputMonitoring
+//    @available(macOS 15.0, macCatalyst 18.0, *)
+//    case localNetwork
     case screenRecording
     case passkeysAccess
     case automation

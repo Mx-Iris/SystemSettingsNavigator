@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func navigate(_ sender: UIButton) {
-        try? SystemSettingsNavigator.shared.navigate(to: .privacySecurity(.appManagement), completion: nil)
+        UIApplication.shared.openSystemSettings(.privacySecurity(.appManagement))
     }
 }
 
