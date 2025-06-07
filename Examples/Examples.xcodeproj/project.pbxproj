@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E97C5C7C2DF486E800C90598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E97C5C772DF486E800C90598 /* Assets.xcassets */; };
+		E97C5C7D2DF486E800C90598 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C5C782DF486E800C90598 /* ContentView.swift */; };
+		E97C5C7E2DF486E800C90598 /* Example_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E97C5C7A2DF486E800C90598 /* Example_SwiftUIApp.swift */; };
+		E97C5C802DF486F800C90598 /* SystemSettingsNavigator in Frameworks */ = {isa = PBXBuildFile; productRef = E97C5C7F2DF486F800C90598 /* SystemSettingsNavigator */; };
 		E9C354C82B793B11000D0157 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C354C72B793B11000D0157 /* AppDelegate.swift */; };
 		E9C354CA2B793B13000D0157 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9C354C92B793B13000D0157 /* Assets.xcassets */; };
 		E9C354CD2B793B13000D0157 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9C354CB2B793B13000D0157 /* MainMenu.xib */; };
@@ -21,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E97C5C6B2DF486DE00C90598 /* Example-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97C5C772DF486E800C90598 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E97C5C782DF486E800C90598 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		E97C5C792DF486E800C90598 /* Example_SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example_SwiftUI.entitlements; sourceTree = "<group>"; };
+		E97C5C7A2DF486E800C90598 /* Example_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Example_SwiftUIApp.swift; sourceTree = "<group>"; };
 		E9C354C42B793B11000D0157 /* Example-AppKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example-AppKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9C354C72B793B11000D0157 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9C354C92B793B13000D0157 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +47,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E97C5C682DF486DE00C90598 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C5C802DF486F800C90598 /* SystemSettingsNavigator in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9C354C12B793B11000D0157 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -57,11 +74,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E97C5C7B2DF486E800C90598 /* Example-SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				E97C5C772DF486E800C90598 /* Assets.xcassets */,
+				E97C5C782DF486E800C90598 /* ContentView.swift */,
+				E97C5C792DF486E800C90598 /* Example_SwiftUI.entitlements */,
+				E97C5C7A2DF486E800C90598 /* Example_SwiftUIApp.swift */,
+			);
+			path = "Example-SwiftUI";
+			sourceTree = "<group>";
+		};
 		E9C354BB2B793B11000D0157 = {
 			isa = PBXGroup;
 			children = (
 				E9C354C62B793B11000D0157 /* Example-AppKit */,
 				E9C354D92B793B63000D0157 /* Example-UIKit */,
+				E97C5C7B2DF486E800C90598 /* Example-SwiftUI */,
 				E9C354C52B793B11000D0157 /* Products */,
 				E9C354F32B793C38000D0157 /* Frameworks */,
 			);
@@ -72,6 +101,7 @@
 			children = (
 				E9C354C42B793B11000D0157 /* Example-AppKit.app */,
 				E9C354D82B793B63000D0157 /* Example-UIKit.app */,
+				E97C5C6B2DF486DE00C90598 /* Example-SwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,6 +142,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E97C5C6A2DF486DE00C90598 /* Example-SwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E97C5C762DF486DF00C90598 /* Build configuration list for PBXNativeTarget "Example-SwiftUI" */;
+			buildPhases = (
+				E97C5C672DF486DE00C90598 /* Sources */,
+				E97C5C682DF486DE00C90598 /* Frameworks */,
+				E97C5C692DF486DE00C90598 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Example-SwiftUI";
+			packageProductDependencies = (
+				E97C5C7F2DF486F800C90598 /* SystemSettingsNavigator */,
+			);
+			productName = "Example-SwiftUI";
+			productReference = E97C5C6B2DF486DE00C90598 /* Example-SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
 		E9C354C32B793B11000D0157 /* Example-AppKit */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E9C354D12B793B13000D0157 /* Build configuration list for PBXNativeTarget "Example-AppKit" */;
@@ -159,9 +209,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1520;
+				LastSwiftUpdateCheck = 1640;
 				LastUpgradeCheck = 1520;
 				TargetAttributes = {
+					E97C5C6A2DF486DE00C90598 = {
+						CreatedOnToolsVersion = 16.4;
+					};
 					E9C354C32B793B11000D0157 = {
 						CreatedOnToolsVersion = 15.2;
 					};
@@ -187,11 +240,20 @@
 			targets = (
 				E9C354C32B793B11000D0157 /* Example-AppKit */,
 				E9C354D72B793B63000D0157 /* Example-UIKit */,
+				E97C5C6A2DF486DE00C90598 /* Example-SwiftUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E97C5C692DF486DE00C90598 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C5C7C2DF486E800C90598 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9C354C22B793B11000D0157 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -214,6 +276,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E97C5C672DF486DE00C90598 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E97C5C7D2DF486E800C90598 /* ContentView.swift in Sources */,
+				E97C5C7E2DF486E800C90598 /* Example_SwiftUIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E9C354C02B793B11000D0157 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,6 +333,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E97C5C742DF486DF00C90598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Example-SwiftUI/Example_SwiftUI.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5Q73692VW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JH.Examples.Example-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E97C5C752DF486DF00C90598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Example-SwiftUI/Example_SwiftUI.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5Q73692VW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.JH.Examples.Example-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		E9C354CF2B793B13000D0157 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -502,6 +629,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E97C5C762DF486DF00C90598 /* Build configuration list for PBXNativeTarget "Example-SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E97C5C742DF486DF00C90598 /* Debug */,
+				E97C5C752DF486DF00C90598 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E9C354BF2B793B11000D0157 /* Build configuration list for PBXProject "Examples" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -532,6 +668,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E97C5C7F2DF486F800C90598 /* SystemSettingsNavigator */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SystemSettingsNavigator;
+		};
 		E9C354F42B793C38000D0157 /* SystemSettingsNavigator */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SystemSettingsNavigator;

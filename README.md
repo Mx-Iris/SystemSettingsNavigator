@@ -31,6 +31,23 @@ import SystemSettingsNavigator
 NSWorkspace.shared.openSystemSettings(.accessibility(.audio))
 // UIKit
 UIApplication.shared.openSystemSettings(.accessibility(.audio))
+// SwiftUI
+struct ContentView: View {
+    
+    @Environment(\.openSystemSetting)
+    private var openSystemSetting
+    
+    var body: some View {
+        VStack {
+            Button {
+                openSystemSetting(.accessibility(.audio))
+            } label: {
+                Text("Open System Settings")
+            }
+        }
+        .padding()
+    }
+}
 ```
 
 ## Contributing

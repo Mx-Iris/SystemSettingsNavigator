@@ -207,8 +207,12 @@ public enum SystemSettingsPane: Pane {
                 "x-apple.systempreferences:com.apple.preference.security?FileVault"
             case .lockdownMode:
                 "x-apple.systempreferences:com.apple.preference.security?LockdownMode"
-            case .extensions:
-                "x-apple.systempreferences:com.apple.ExtensionsPreferences"
+            case .extensions(let tab):
+                if tab == .primary {
+                    "x-apple.systempreferences:com.apple.ExtensionsPreferences"
+                } else {
+                    "x-apple.systempreferences:com.apple.ExtensionsPreferences?extensionPointIdentifier=\(tab.extensionPointIdentifier)"
+                }
             case .profiles:
                 "x-apple.systempreferences:com.apple.Profiles-Settings.extension"
             case .advanced:
@@ -341,7 +345,83 @@ public enum PrivacySecuritySettingsTab {
     case fileVault
     @available(macOS 14.0, macCatalyst 17.0, *)
     case lockdownMode
-    case extensions
+    case extensions(ExtensionSettingsTab)
     case profiles
     case advanced
+}
+
+public enum ExtensionSettingsTab {
+    case primary
+    // System(OS) Extensions
+    case camera
+    case driver
+    case network
+    case endpointSecurity
+    // FSKit(FS) Extensions
+    case fileSystem
+    // App(NS) Extensions
+    case action
+    case fileProviders
+    case finder
+    case touchBar
+    case photoProjects
+    case photosEditing
+    case quickLook
+    case sharing
+    case spotlight
+    case spotlightImporters
+    case xcodeSourceEditor
+    // Legacy Plugins
+    // These extension points are standins for non AppExtension plugins that need to show in Settings
+    case inputMethods
+    case colorPanels
+    case dockTiles
+    case smartCardReaders
+    
+    var extensionPointIdentifier: String {
+        switch self {
+        case .primary:
+            ""
+        case .camera:
+            "com.apple.system_extension.cmio.extension-point"
+        case .driver:
+            "com.apple.system_extension.driver_extension.extension-point"
+        case .network:
+            "com.apple.system_extension.network_extension.extension-point"
+        case .endpointSecurity:
+            "com.apple.system_extension.endpoint_security.extension-point"
+        case .fileSystem:
+            "com.apple.fskit.fsmodule"
+        case .action:
+            "com.apple.ui-services"
+        case .fileProviders:
+            "com.apple.fileprovider-nonui"
+        case .finder:
+            "com.apple.finder-quick-actions"
+        case .touchBar:
+            "com.apple.touchbar-quick-actions"
+        case .photosEditing:
+            "com.apple.photo-editing"
+        case .photoProjects:
+            "com.apple.photo-project"
+        case .quickLook:
+            "com.apple.quicklook.preview"
+        case .sharing:
+            "com.apple.share-services"
+        case .spotlight:
+            "com.apple.spotlight.import"
+        case .xcodeSourceEditor:
+            "com.apple.dt.Xcode.extension.source-editor"
+        case .dockTiles:
+            "com.apple.extensionkit.legacy-plugins.docktiles"
+        case .spotlightImporters:
+            "com.apple.extensionkit.legacy-plugins.spotlight-importer"
+        case .smartCardReaders:
+            "com.apple.extensionkit.legacy-plugins.smart-card-reader"
+        case .colorPanels:
+            "com.apple.extensionkit.legacy-plugins.color-picker"
+        case .inputMethods:
+            "com.apple.extensionkit.legacy-plugins.input-method"
+        }
+    }
 }
