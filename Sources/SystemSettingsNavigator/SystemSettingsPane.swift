@@ -207,8 +207,12 @@ public enum SystemSettingsPane: Pane {
                 "x-apple.systempreferences:com.apple.preference.security?FileVault"
             case .lockdownMode:
                 "x-apple.systempreferences:com.apple.preference.security?LockdownMode"
-            case .extensions:
-                "x-apple.systempreferences:com.apple.ExtensionsPreferences"
+            case .extensions(let tab):
+                if tab == .primary {
+                    "x-apple.systempreferences:com.apple.ExtensionsPreferences"
+                } else {
+                    "x-apple.systempreferences:com.apple.ExtensionsPreferences?extensionPointIdentifier=\(tab.extensionPointIdentifier)"
+                }
             case .profiles:
                 "x-apple.systempreferences:com.apple.Profiles-Settings.extension"
             case .advanced:
@@ -341,7 +345,27 @@ public enum PrivacySecuritySettingsTab {
     case fileVault
     @available(macOS 14.0, macCatalyst 17.0, *)
     case lockdownMode
-    case extensions
+    case extensions(ExtensionSettingsTab)
     case profiles
     case advanced
+}
+
+public enum ExtensionSettingsTab {
+    case primary
+    case action
+    case fileProviders
+    case xcodeSourceEditor
+    
+    var extensionPointIdentifier: String {
+        switch self {
+        case .primary:
+            ""
+        case .action:
+            "com.apple.ui-services"
+        case .fileProviders:
+            "com.apple.fileprovider-nonui"
+        case .xcodeSourceEditor:
+            "com.apple.dt.Xcode.extension.source-editor"
+        }
+    }
 }

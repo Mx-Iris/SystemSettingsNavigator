@@ -30,7 +30,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBAction func navigate(_ sender: NSButton) {
         if #available(macOS 15.0, *) {
 //            try? SystemSettingsNavigator.shared.navigate(to: .privacySecurity(.extensions))
-            NSWorkspace.shared.openSystemSettings(.privacySecurity(.extensions))
+            NSWorkspace.shared.openSystemSetting(.privacySecurity(.extensions(.fileProviders)))
         } else {
             // Fallback on earlier versions
         }
