@@ -16,7 +16,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button {
-                openSystemSetting(.privacySecurity(.extensions(.xcodeSourceEditor)))
+                openSystemSetting(.privacySecurity(.extensions(.fileSystem)))
             } label: {
                 Text("Open System Settings")
             }
