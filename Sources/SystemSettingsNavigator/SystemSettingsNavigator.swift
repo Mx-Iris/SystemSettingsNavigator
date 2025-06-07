@@ -10,7 +10,7 @@ public final class SystemSettingsNavigator {
     public static let shared = SystemSettingsNavigator()
 
     #if canImport(UIKit) && targetEnvironment(macCatalyst)
-    @available(*, deprecated, renamed: "UIApplication.openSystemSettings(_:completion:)")
+    @available(*, deprecated, renamed: "UIApplication.openSystemSetting(_:completion:)")
     public func navigate(to pane: SystemSettingsPane, completion: ((Bool) -> Void)? = nil) throws {
         UIApplication.shared.open(pane.url, completionHandler: completion)
     }
@@ -18,7 +18,7 @@ public final class SystemSettingsNavigator {
 
     #if canImport(AppKit) && !targetEnvironment(macCatalyst)
     @discardableResult
-    @available(*, deprecated, renamed: "NSWorkspace.openSystemSettings(_:)")
+    @available(*, deprecated, renamed: "NSWorkspace.openSystemSetting(_:)")
     public func navigate(to pane: SystemSettingsPane) throws -> Bool {
         NSWorkspace.shared.open(pane.url)
     }
@@ -41,7 +41,7 @@ extension UIApplication {
 #if canImport(AppKit) && !targetEnvironment(macCatalyst)
 extension NSWorkspace {
     @discardableResult
-    @available(*, deprecated, renamed: "NSWorkspace.openSystemSettings(_:)")
+    @available(*, deprecated, renamed: "NSWorkspace.openSystemSetting(_:)")
     public func openSystemSettings(_ pane: SystemSettingsPane) -> Bool {
         openSystemSetting(pane)
     }
