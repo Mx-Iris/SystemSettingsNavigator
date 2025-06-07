@@ -28,9 +28,9 @@ import SystemSettingsNavigator
 
 // Example: Open the Accessibility pane audio tab
 // AppKit
-NSWorkspace.shared.openSystemSettings(.accessibility(.audio))
+NSWorkspace.shared.openSystemSetting(.accessibility(.audio))
 // UIKit
-UIApplication.shared.openSystemSettings(.accessibility(.audio))
+UIApplication.shared.openSystemSetting(.accessibility(.audio))
 // SwiftUI
 struct ContentView: View {
     
