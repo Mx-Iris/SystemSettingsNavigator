@@ -10,13 +10,13 @@ import SystemSettingsNavigator
 
 struct ContentView: View {
     
-    @Environment(\.openSystemSetting)
-    private var openSystemSetting
+    @Environment(\.openSystemSettings)
+    private var openSystemSettings
     
     var body: some View {
         VStack {
             Button {
-                openSystemSetting(.privacySecurity(.extensions(.fileSystem)))
+                openSystemSettings(.privacySecurity(.extensions(.fileSystem)))
             } label: {
                 Text("Open System Settings")
             }
