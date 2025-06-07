@@ -40,7 +40,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button {
-                openSystemSetting(.privacySecurity(.extensions(.fileSystem)))
+                openSystemSetting(.accessibility(.audio))
             } label: {
                 Text("Open System Settings")
             }
