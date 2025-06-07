@@ -28,19 +28,19 @@ import SystemSettingsNavigator
 
 // Example: Open the Accessibility pane audio tab
 // AppKit
-NSWorkspace.shared.openSystemSetting(.accessibility(.audio))
+NSWorkspace.shared.openSystemSettings(.accessibility(.audio))
 // UIKit
-UIApplication.shared.openSystemSetting(.accessibility(.audio))
+UIApplication.shared.openSystemSettings(.accessibility(.audio))
 // SwiftUI
 struct ContentView: View {
     
-    @Environment(\.openSystemSetting)
-    private var openSystemSetting
+    @Environment(\.openSystemSettings)
+    private var openSystemSettings
     
     var body: some View {
         VStack {
             Button {
-                openSystemSetting(.accessibility(.audio))
+                openSystemSettings(.accessibility(.audio))
             } label: {
                 Text("Open System Settings")
             }
